@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import {signInWithEmailAndPassword, onAuthStateChanged, createUserWithEmailAndPassword} from "firebase/auth";
 import { auth } from '../firebase.jsx';
 import {useNavigate} from "react-router-dom"
+import myImage from '../assets/todo.png';
 
 const Whel = () => {
     const [email, setEmail] = useState("");
@@ -56,7 +57,8 @@ const Whel = () => {
     <div className='h-screen w-screen bg-gradient-to-tr from-pink-500 to-indigo-900 relative '>
       <div className='pt-10 pl-4 md:pl-8 font-abc text-4xl md:text-7xl text-white font-bold  '>
         
-        <div className='absolute bottom-0  md:top-0 right-0 md:right-20 scale-10 md:scale-70 '> </div>
+        <div className='absolute bottom-0  md:top-0 right-0 md:right-20 scale-10 md:scale-70 '>
+        <img src={myImage} alt="My Image" /> </div>
        
        <h1 >Task - Management App</h1> 
       </div>
